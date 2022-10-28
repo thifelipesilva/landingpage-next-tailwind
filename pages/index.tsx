@@ -1,8 +1,8 @@
 import Botao from "../components/Botao";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
-    <div className="bg-azulEscuro relative top-14 left-0 z-[-1] flex flex-col items-center md:flex-row md:px-12 px-3">
+    <div className="bg-azulEscuro md:h-screen relative top-14 left-0 z-[-1] pt-3 flex flex-col items-center md:flex-row md:px-12 px-3">
       <section className="w-1/2 h-auto mt-4 md:text-left text-center ">
         
         <p className="font-bold text-white text-3xl mb-4">Esse texto é uma headline super legal</p>

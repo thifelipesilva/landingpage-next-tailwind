@@ -1,6 +1,7 @@
 import logo from '../../public/logo.png';
 import { IoClose, IoMenu } from "react-icons/io5";
 import { useState } from 'react';
+import Link from 'next/link';
 const Navbar = () => {
 
     let links =[
@@ -31,12 +32,14 @@ const Navbar = () => {
                     {
                         links.map(link => (
                             <li key={link.name} className='text-3 md:my-0 my-3'>
-                                <a
-                                 className='text-white cursor-pointer hover:underline hover:text-verde duration-200' 
-                                 href={link.link}
-                                >
-                                    {link.name}
-                                </a>
+                                <Link href={link.link} legacyBehavior>
+                                    <a
+                                    className='text-white cursor-pointer hover:underline hover:text-verde duration-200' 
+                                    
+                                    >
+                                        {link.name}
+                                    </a>
+                                </Link>
                             </li>
                         ))
                     }
