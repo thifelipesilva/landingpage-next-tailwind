@@ -18,7 +18,9 @@ const Navbar = () => {
         <nav className="bg-azulEscuro shadow-lg w-full fixed top-0 left-0 p-3 ">
             <div className="md:flex items-center justify-between">
 
-                <div className='bg-verde w-32 h-8'></div>
+                <div className='w-32 h-8'>
+                    <img src="/logo.png" alt="" />
+                </div>
 
                 <div className='absolute right-3 top-3 cursor-pointer md:hidden'
                     onClick={() => setMenu(!menu)}
