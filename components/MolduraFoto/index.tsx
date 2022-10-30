@@ -5,7 +5,7 @@ interface Itype {
 const MolduraFoto = ({ caminhoFoto } : Itype) => {
     return(
         <div className="px-3 md:px-0 max-w-md">
-            <img src={ caminhoFoto } alt="" width={"auto"}/>
+            <img src={ caminhoFoto } alt="" />
         </div>
     );
 };

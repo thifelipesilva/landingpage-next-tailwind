@@ -2,7 +2,7 @@ import Card from "../components/Card";
 
 const Conheca: React.FC = () => {
     return(
-        <div className="bg-azulEscuro md:h-screen relative top-14 left-0 z-[-1] pt-3 items-center md:flex-row md:px-36 px-10">
+        <div className="bg-azulEscuro md:h-screen relative top-14 left-0 pt-3 items-center md:flex-row md:px-36 px-10">
             
             <h2 className="font-bold text-white text-4xl text-center mt-4  mb-3 md:mb-4">Conheça</h2>
             

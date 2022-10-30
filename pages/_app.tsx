@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 
 export default function App({ Component, pageProps }: AppProps) {
   return(
-    <div className='w-full h-screen'>
+    <div className='w-auto h-screen relative'>
       <Navbar/>
       <Component {...pageProps} />
     </div>
