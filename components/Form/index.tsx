@@ -1,4 +1,6 @@
+import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import ReCAPTCHA from 'react-google-recaptcha';
 
 type FormValues = {
     email: string,
@@ -8,11 +10,11 @@ type FormValues = {
     texto: string
 };
 
-
-
-
-
 const Form = () => {
+
+    
+
+    const recaptchRef = React.createRef<ReCAPTCHA>()
 
     const { register, formState: { errors }, handleSubmit, reset } = useForm<FormValues>({
         
@@ -24,6 +26,7 @@ const Form = () => {
             texto: ''
         },
     });
+
     const enviarDados: SubmitHandler<FormValues> = data => {
         reset();
         console.log(data)
@@ -42,7 +45,7 @@ const Form = () => {
              className={'bg-gray-200 p-2 w-full text-azulEscuro md:w-2/4 rounded-xl'}
              required
             />
-            {errors.email && <p className="text-2 text-red-500">O campo e-mail precisa ter 20 palavras ou mais</p>}
+            {errors.email && <span className="text-[10px] inline-block text-red-500">O campo e-mail precisa ter 20 palavras ou mais</span>}
 
             <div className="flex flex-col gap-3 md:gap-1 w-full md:flex-row justify-center">
 
@@ -53,8 +56,8 @@ const Form = () => {
                  className={'bg-gray-200 p-2 text-azulEscuro md:w-1/4 rounded-xl'}
                  required
                 />
-                {errors.nome && <p className="text-2 text-red-500">O campo nome precisa ter dez palavras ou mais</p>}
-
+                
+            
                 <input
                  {...register("empresa", { required: true, minLength: 5 })}
                  type={'text'}
@@ -62,10 +65,12 @@ const Form = () => {
                  className={'bg-gray-200 p-2 text-azulEscuro md:w-1/4 rounded-xl'}
                  required
                 />
-                {errors.empresa && <p className="text-2 text-red-500">O campo nome da empresa precisa ter cinco palavras ou mais</p>}
+                
 
             </div>
-
+            {errors.nome && <span className="text-[10px] inline-block text-red-500">O campo nome precisa ter dez palavras ou mais</span>}
+            {errors.empresa && <span className="text-[10px] inline-block text-red-500">O campo nome da empresa precisa ter cinco palavras ou mais</span>}
+            
             <input
              {...register("assunto", { required: true, minLength: 5 })}
              type={'text'}
@@ -73,14 +78,14 @@ const Form = () => {
              className={'bg-gray-200 p-2 w-full text-azulEscuro md:w-2/4 rounded-xl'}
              required
             />
-            {errors.empresa && <p className="text-2 text-red-500">O campo nome da empresa precisa ter cinco palavras ou mais</p>}
+            {errors.empresa && <span className="text-[10px] inline-block text-red-500">O campo nome da empresa precisa ter cinco palavras ou mais</span>}
 
             <textarea
              {...register("texto", { required: true, minLength: 20 })}
              className="w-full bg-gray-200 h-60 md:w-2/4 rounded-xl"
              required
             />
-            {errors.texto && <p className="text-2 text-red-500">O campo texto precisa ter mais de vinte palavras</p>}
+            {errors.texto && <span className="text-[10px] inline-block text-red-500">O campo texto precisa ter mais de vinte palavras</span>}
 
             <div className="w-full px-1 md:flex md:justify-center">
 
@@ -108,6 +113,11 @@ const Form = () => {
                 </button>
 
             </div>
+
+            <ReCAPTCHA
+             ref={recaptchRef}
+             sitekey="6Lfq6MoiAAAAANkwUdIoFTXPxga80Re7fF0VojfJ"
+            />
             
         </form>
     );

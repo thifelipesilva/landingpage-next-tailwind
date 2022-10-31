@@ -3,7 +3,7 @@ import Card from "../components/Card";
 const Conheca: React.FC = () => {
     return(
         <div className="bg-azulEscuro h-full">
-            <div className="bg-azulEscuro px-4 py-3  lg:px-72">
+            <div className="bg-azulEscuro px-4 py-3  lg:px-72 xl:px-96">
                 <h2 className="font-bold text-white text-4xl text-center my-4">Conheça</h2>
                 
                 <div className="mb-4 md:max-w-screen-md">
