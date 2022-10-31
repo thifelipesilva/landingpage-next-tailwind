@@ -1,28 +1,36 @@
+import Head from "next/head";
 import Botao from "../components/Botao";
 
 const Home: React.FC = () => {
   return (
-    <div className="bg-azulEscuro ">
+    <>
+      <Head>
+        <title>Datanow - Home</title>
+        <meta name="Home" content="Página inicial da empresa"/>
+      </Head>
 
-      <div className="bg-azulEscuro py-3 px-4 flex flex-col items-center md:flex-row md:justify-between lg:px-12">
-        
-        <section className="text-center mt-4 gap-2 md:max-w-lg md:text-left">
+      <div className="bg-azulEscuro h-full">
+
+        <div className="bg-azulEscuro h-full py-3 px-4 flex flex-col items-center md:flex-row md:justify-between lg:px-12 xl:px-32">
           
-          <p className="font-bold text-white text-4xl md:text-5xl">Esse texto é uma headline super legal</p>
+          <section className="text-center mt-4 gap-2 md:max-w-lg md:text-left">
+            
+            <p className="font-bold text-white text-4xl md:text-5xl xl:text-6xl">Esse texto é uma headline super legal</p>
 
-          <p className="text-white text-1 my-3 md:max-w-md">E esse texto aqui acompanha o título. Já que eu preciso falar muito, vou falar sobre Emas. Considerada a maior ave do continente americano, a ema pode chegar a medir 1,70 m de altura! Impressionante, não é?</p>
-          
-          <Botao />
+            <p className="text-white text-1 my-3 md:max-w-md xl:max-w-lg">E esse texto aqui acompanha o título. Já que eu preciso falar muito, vou falar sobre Emas. Considerada a maior ave do continente americano, a ema pode chegar a medir 1,70 m de altura! Impressionante, não é?</p>
+            
+            <Botao />
 
-        </section>
+          </section>
 
-        <section className="">
+          <section className="">
 
-          <img src="/note-home.png" alt="" />
+            <img src="/note-home.png" alt="Imagem de um computador e alguns graficos" />
 
-        </section>
+          </section>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

@@ -6,7 +6,11 @@ import MolduraFoto from "../components/MolduraFoto";
 const Funcionalidades = () => {
     return (
         <>
-            <Head>Funcionalidades</Head>
+            <Head>
+                <title>Datanow - Funcionalidades</title>
+                <meta name="Funcionalidades" content="Página sobres as os serviços oferecidos pela empresa"/>
+            </Head>
+
             <div className="bg-azulEscuro md:px-12 px-3 py-5 md:flex md:flex-col">
 
                 <div className="bg-azulEscuro mb-3 md:mb-0 md:flex md:items-center mx-auto">
