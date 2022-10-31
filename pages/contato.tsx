@@ -6,12 +6,9 @@ const Contato = () => {
 
     
     return (
-        <div className="bg-white-50 md:h-screen relative top-11 left-0 pt-3">
-            <div>
-                <div className="bg-azulEscuro h-7"></div>
-                <div className="bg-verde h-2"></div>
-            </div>
-
+        <div className="bg-white">
+            <div className="bg-azulEscuro h-10"></div>
+            <div className="bg-verde h-3"></div>
             <div className="max-w-sm mx-auto">
                 <p className="font-bold text-azulEscuro my-5 text-3xl text-center ">
                     Sed ut perspiciatis unde omnis iste natus erro.
@@ -20,8 +17,8 @@ const Contato = () => {
 
             <Form />
 
-            <Footer/>
 
+            <Footer/>
         </div>
     );
 };

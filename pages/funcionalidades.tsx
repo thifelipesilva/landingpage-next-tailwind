@@ -7,7 +7,7 @@ const Funcionalidades = () => {
     return (
         <>
             <Head>Funcionalidades</Head>
-            <div className="bg-azulEscuro relative top-14 left-0 z-[-1] py-4 md:px-12 px-3 md:flex md:flex-col">
+            <div className="bg-azulEscuro md:px-12 px-3 py-5 md:flex md:flex-col">
 
                 <div className="bg-azulEscuro mb-3 md:mb-0 md:flex md:items-center mx-auto">
                     <CaixaTexto 

@@ -6,7 +6,7 @@ interface Itype {
 
 const Card = ({ foto, titulo, texto } : Itype) => {
     return(
-        <div className="bg-white rounded-2xl px-2 py-3 max-w-md">
+        <div className="bg-white rounded-2xl px-2 py-8 md:py-10  max-w-md">
 
             <div className="max-w-sm ">
                 <p className="font-bold text-azulEscuro text-4 text-center"> 

@@ -15,7 +15,7 @@ const Navbar = () => {
 
 
     return(
-        <nav className="bg-azulEscuro shadow-lg w-full absolute top-0 left-0 p-3 z-[1]">
+        <nav className="bg-azulEscuro shadow-lg w-full relative top-0 left-0 p-3 z-[1]">
             <div className="md:flex items-center justify-between">
 
                 <div className='w-32 h-8'>
